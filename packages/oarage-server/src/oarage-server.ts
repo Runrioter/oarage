@@ -2,24 +2,38 @@ import Koa = require('koa');
 import Router = require('koa-router');
 import * as K8s from '@kubernetes/client-node';
 
-const app = new Koa();
-const router = new Router();
+class Oarage extends Koa {
 
-const kc = new K8s.KubeConfig();
-kc.loadFromCluster();
+  private readonly router: Router;
+  private readonly client: K8s.ApiType;
 
-const client = kc.makeApiClient(K8s.Core_v1Api)
+  constructor() {
+    super();
+    this.router = new Router();
+    this.registerRoutes();
 
-router.get('ListAllNamespaces', '/api/v1/pods', async ctx => {
-  try {
-    const res = await client.listPodForAllNamespaces();
-    ctx.body = res;
-  } catch(err) {
-    ctx.body = err;
+    const kc = new K8s.KubeConfig();
+    kc.loadFromCluster();
+    this.client = kc.makeApiClient(K8s.Core_v1Api);
   }
-});
 
-app
-  .use(router.routes())
-  .use(router.allowedMethods())
-  .listen(3000);
+  private registerRoutes() {
+    this.router.get('ListAllNamespaces', '/api/v1/pods', async ctx => {
+      try {
+        const res = await (<K8s.Core_v1Api>this.client).listPodForAllNamespaces();
+        ctx.body = res;
+      } catch(err) {
+        ctx.body = err;
+      }
+    });
+  }
+
+  run(port: number) {
+    this.use(this.router.routes())
+    .use(this.router.allowedMethods())
+    .listen(port);
+  }
+
+}
+
+export = Oarage;

@@ -1,11 +1,4 @@
-# `oarage-server`
+# `@oarage/server`
 
-> TODO: description
+> Oarage server
 
-## Usage
-
-```
-const oarageServer = require('oarage-server');
-
-// TODO: DEMONSTRATE API
-```
