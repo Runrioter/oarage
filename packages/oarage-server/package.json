@@ -1,0 +1,35 @@
+{
+  "name": "@oarage/server",
+  "version": "0.0.1",
+  "description": "Oarage server",
+  "author": "Runrioter <runrioter@qq.com>",
+  "homepage": "https://github.com/Runrioter/oarage/tree/master/packages/oarage-server#readme",
+  "license": "ISC",
+  "bin": "lib/oarage-server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Runrioter/oarage.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Runrioter/oarage/issues"
+  },
+  "dependencies": {
+    "@kubernetes/client-node": "^0.7.2",
+    "koa": "^2.6.2",
+    "koa-ejs": "^4.1.2",
+    "koa-router": "^7.4.0"
+  }
+}

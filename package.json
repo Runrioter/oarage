@@ -1,0 +1,31 @@
+{
+  "name": "oarage",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "make build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Runrioter/oarage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Runrioter/oarage/issues"
+  },
+  "homepage": "https://github.com/Runrioter/oarage#readme",
+  "devDependencies": {
+    "@types/koa": "^2.0.47",
+    "@types/koa-router": "^7.0.35",
+    "@types/node": "^10.12.15",
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/request": "^2.48.1",
+    "@types/ws": "^6.0.1",
+    "gulp": "^4.0.0",
+    "lerna": "^3.6.0",
+    "typescript": "^3.2.2"
+  }
+}

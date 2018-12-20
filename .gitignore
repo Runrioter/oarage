@@ -1,0 +1,8 @@
+.DS_Store
+/node_modules
+/packages/*/node_modules
+/packages/*/lib
+
+/lerna-debug.log
+
+.vscode
