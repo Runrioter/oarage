@@ -1,19 +1,19 @@
 # oarage
 
-### Intro (介绍)
+### Introduction (介绍)
 
-该项目旨在学习各种流行的技术，期待投入生产会经历很长的周期。😄
+该项目旨在整合我目前所学习的内容，期待投入生产会经历很长的周期。😄
 
-### Status
-
+### Status (当前状态)
+
   **WIP**: 开发中
 
 
-### Deploy(部署)
+### Deployment(部署)
 
 * Docker for mac (Kubernetes enabled)
 
-  1. Open terminal and run (打开控制台并执行)
+  1. Open terminal and run (打开控制台并执行)
 
   ```shell
   kubectl apply -f https://raw.githubusercontent.com/Runrioter/oarage/master/kubernetes/local/oarage-backend-deployment.yaml
@@ -29,4 +29,4 @@
 
   ```shell
   open http://oarage.local/api/v1/pods
-    ```
+  ```

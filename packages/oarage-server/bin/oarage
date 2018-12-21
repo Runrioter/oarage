@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-const Oarage = require('../lib/oarage-server');
+const OarageServer = require('../lib/oarageServer');
 
-new Oarage().run(6881);
+const PORT = 6881;
+
+new OarageServer().run(PORT);
+
+console.log(`Oarage server listening on port ${PORT}`);

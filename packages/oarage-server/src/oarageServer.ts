@@ -1,8 +1,10 @@
+// Copyright 2018 Runrioter
+
+import * as K8s from '@kubernetes/client-node';
 import Koa = require('koa');
 import Router = require('koa-router');
-import * as K8s from '@kubernetes/client-node';
 
-class Oarage extends Koa {
+class OarageServer extends Koa {
 
   private readonly router: Router;
   private readonly client: K8s.ApiType;
@@ -17,23 +19,23 @@ class Oarage extends Koa {
     this.client = kc.makeApiClient(K8s.Core_v1Api);
   }
 
-  private registerRoutes() {
+  public run(port: number) {
+    this.use(this.router.routes())
+        .use(this.router.allowedMethods())
+        .listen(port);
+  }
+
+  private registerRoutes(): void {
     this.router.get('ListAllNamespaces', '/api/v1/pods', async ctx => {
       try {
-        const res = await (<K8s.Core_v1Api>this.client).listPodForAllNamespaces();
+        const res = await (this.client as K8s.Core_v1Api).listPodForAllNamespaces();
         ctx.body = res;
       } catch(err) {
-        ctx.body = err;
+        ctx.body = (err as Error).message;
       }
     });
   }
 
-  run(port: number) {
-    this.use(this.router.routes())
-    .use(this.router.allowedMethods())
-    .listen(port);
-  }
-
 }
 
-export = Oarage;
+export = OarageServer;

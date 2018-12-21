@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "build": "make build"
+    "build": "make build",
+    "lint": "make lint"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "@types/ws": "^6.0.1",
     "gulp": "^4.0.0",
     "lerna": "^3.6.0",
+    "prettier": "^1.15.3",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
   }
 }
