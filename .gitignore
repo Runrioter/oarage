@@ -3,6 +3,7 @@
 /packages/*/node_modules
 /packages/*/lib
 
-/lerna-debug.log
+lerna-debug.log
+yarn-error.log
 
 .vscode

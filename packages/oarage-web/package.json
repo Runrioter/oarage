@@ -1,0 +1,43 @@
+{
+  "name": "@oarage/web",
+  "version": "0.0.4",
+  "description": "Oarage server",
+  "author": "Runrioter <runrioter@qq.com>",
+  "homepage": "https://github.com/Runrioter/oarage/tree/master/packages/oarage-web#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Runrioter/oarage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Runrioter/oarage/issues"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts-ts": "3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "PUBLIC_URL='/' react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "typescript": "^3.2.2"
+  }
+}

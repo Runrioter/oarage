@@ -1,9 +1,26 @@
 #!/usr/bin/env node
 
+const path = require('path');
+
+const argv = require('yargs')
+  .usage("Usage: $0 -p [port] -s [working directory]")
+  .option('port', {
+    alias: 'p',
+    describe: 'the port that oarage server should bind to'
+  })
+  .option('s', {
+    type: 'string',
+    describe: 'the working directory that oarage server should serve',
+    demandOption: true
+  })
+  .help()
+  .argv;
+
 const OarageServer = require('../lib/oarageServer');
 
-const PORT = 6881;
+const port = argv.p || 6881;
+const dir = path.resolve(process.cwd(), argv.s);
 
-new OarageServer().run(PORT);
+new OarageServer(dir).run(port);
 
-console.log(`Oarage server listening on port ${PORT}`);
+console.log(`Oarage server serve in ${dir} listening on port ${port}`);
