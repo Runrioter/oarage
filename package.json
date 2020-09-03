@@ -24,7 +24,7 @@
     "@types/react": "^16.7.17",
     "@types/react-dom": "^16.0.11",
     "@types/request": "^2.48.1",
-    "@types/ws": "^6.0.1",
+    "@types/ws": "^7.2.6",
     "gulp": "^4.0.0",
     "lerna": "^3.6.0",
     "prettier": "^1.15.3",
