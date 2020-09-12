@@ -8,7 +8,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "09:00"
+      time: "10:00"
+      timezone: "Asia/Shanghai"
     assignees:
       - "Runrioter"
     labels:
