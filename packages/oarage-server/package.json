@@ -29,7 +29,7 @@
     "url": "https://github.com/Runrioter/oarage/issues"
   },
   "dependencies": {
-    "@kubernetes/client-node": "^0.12.0",
+    "@kubernetes/client-node": "^0.16.0",
     "koa": "^2.6.2",
     "koa-ejs": "^4.1.2",
     "koa-router": "^9.4.0",
