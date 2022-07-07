@@ -20,7 +20,7 @@
   "devDependencies": {
     "@types/koa": "^2.0.47",
     "@types/koa-router": "^7.0.35",
-    "@types/node": "^16.11.7",
+    "@types/node": "^18.0.3",
     "@types/react": "^17.0.35",
     "@types/react-dom": "^17.0.11",
     "@types/request": "^2.48.1",
